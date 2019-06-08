@@ -1,0 +1,31 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5rem auto;
+}
+.user-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    border: .5px solid lightgrey;
+    border-radius: .2rem;
+    font-weight: bold;
+
+ }
+.profile-pic {
+    border-radius: 50%;
+    height: 2rem;
+    padding: 1rem;
+}
+.user-post{
+    width: 100%;
+}
+.post-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+} 
