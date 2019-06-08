@@ -1,7 +1,7 @@
 import React from 'react';
 import './Form.css';
 
- const Form = ({ inputValue, changeHandler, addComment }) => {
+const Form = ({ inputValue, changeHandler, addComment }) => {
     return (
     <form onSubmit={(event) => addComment(event)}>
         <input
@@ -14,4 +14,4 @@ import './Form.css';
     </form>)
 }
 
- export default Form;
+export default Form;
