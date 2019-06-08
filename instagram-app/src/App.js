@@ -1,22 +1,13 @@
 import React from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
 
-class App extends React.Component {
-  state = {
-    data: [],
-    random: [
-      "philzcoffee",
-      "fortnite",
-      "playhearthstone"
-    ],
-  };
-
-  render(){
-    return (
-      <div className="App">
-      
-      </div>
-    );
-  }
+function App(){
+  return (
+    <div className="App">
+      <SearchBar /> 
+    </div>
+  )
 }
+
 export default App;
