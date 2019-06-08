@@ -2,7 +2,7 @@ header {
     height: 5rem;
 }
 
- nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@ header {
     width: 80%;
 }
 
- .logo__container {
+.logo__container {
     display: flex;
     justify-content: center;
     align-items: center;

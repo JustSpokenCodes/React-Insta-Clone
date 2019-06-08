@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import data from './dummy-data';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
