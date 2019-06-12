@@ -1,7 +1,7 @@
 .form-input {
-    width: 100%;
+    width: 99%;
     height: 2rem;
-    border: 0;
-    padding: 1rem;
+    border: 1px solid blue;
     font-size: 1rem;
+    margin-bottom: 1.2rem;
 }
