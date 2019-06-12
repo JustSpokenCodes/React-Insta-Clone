@@ -4,6 +4,9 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
+
+
+
 function App(){
   const [post] = useState(data);
 

@@ -8,21 +8,20 @@ const SearchBar = (props) => {
         <header className="header">
             <nav>
                 <div className="logo__container">
-                <div className="logo__icon">
-                    <IoLogoInstagram />
-                </div>
+                    <div className="logo__icon">
+                        <IoLogoInstagram />
+                    </div>
                     <h3 className="logo__text">
-                    instagram
+                        instagram
                     </h3>
                 </div>
-                    <input className="search" placeholder= "Search"/>
+                <input className="search" placeholder= "Search"/>
                 <div className="icon__container">
-                <div><FiCompass /></div>
-                <div><IoIosHeartEmpty /></div>
-                <div><FiUser /></div>
+                    <div><FiCompass /></div>
+                    <div><IoIosHeartEmpty /></div>
+                    <div><FiUser /></div>
                 </div>
-        </nav>
-
+            </nav>
         </header>
     )
 }
