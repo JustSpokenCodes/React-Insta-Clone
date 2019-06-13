@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
-import data from './dummy-data';
+import React from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import withAuthenticate from "./authentication/withAuthenticate";
+import Login from './components/Login/Login';
 
-function App(){
-  const [post] = useState(data);
+const ComponentFromWithAutheticate = withAuthenticate(PostContainer)(Login);
 
-  return (
-    <div className="App">
-      <SearchBar />
-      {post.map((userPost, index) =>{
-        return (
-        <PostContainer key={index} props={userPost}/>)
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <ComponentFromWithAutheticate/>
+        <SearchBar />
+        {post.map((userPost, index) =>{
+          return (<PostContainer key={index} props={userPost}/>)
       })}
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

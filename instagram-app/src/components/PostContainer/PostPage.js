@@ -1,7 +1,11 @@
 import React from "react";
 
 const PostPage = props => {
-    return <h1>This is the Log in Page</h1>;
+    return (
+        <div>
+            <h1> This is the PostPage</h1>
+        </div>
+    )
 };
 
 export default PostPage;
