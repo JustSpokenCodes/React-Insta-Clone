@@ -1,17 +1,20 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({ inputValue, changeHandler, addComment }) => {
+const Form = props => {
     return (
-    <form onSubmit={(event) => addComment(event)}>
-        <input
-        className="form-input"
-        type="text"
-        value={inputValue}
-        onChange={changeHandler}
-        placeholder="Add a comment"
+        <div className= "Form">
+            <form onSubmit= {props.submitComment}>
+            <input
+            className="form-input"
+            type="text"
+            value={props.comment}
+            onChange={props.changeHandler}
+            placeholder="Add a comment"
         />
-    </form>)
+    </form>
+    </div>
+    )
 }
 
 export default Form;
