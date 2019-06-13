@@ -12,11 +12,11 @@ class PostContainer extends Component {
             searchPost:[]
         };
     }
-
+// Grabs data from the base to find things 
     componentDidMount(){
         this.setState({posts: dummyData});
     }
-
+//Make the search works
     searchPostsHandler = event => {
         const posts = this.state.posts.filter(p => {
             if (p.username.includes(event.target.value)) {
