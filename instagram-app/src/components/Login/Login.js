@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 import "./Login.css";
 
 class Login extends Component {
@@ -23,32 +23,32 @@ handleLoginSubmit = e => {
 
 render() {
     return (
-    <div className="login-form">
+    <Form className="login-form">
         <h3>Welcome to React Insta Clone</h3>
         <div>Please Login</div>
         <FormGroup>
-        <Input
-            type="text"
-            placeholder="User Name"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-        />
+            <Input
+                type="text"
+                placeholder="User Name"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleInputChange}
+            />
         </FormGroup>
         <FormGroup>
-        <Input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-        />
+            <Input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleInputChange}
+            />
         <br />
         <Button color="success" size="large" onClick={this.handleLoginSubmit}>
             Log In
         </Button>
         </FormGroup>
-    </div>
+    </Form>
     );
 }
 }
