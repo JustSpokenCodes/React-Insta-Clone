@@ -7,8 +7,19 @@ const Comment = props => {
             <div className="username">
                 {props.comment.username}
             </div>
+            <div className="user-comment">
+                {props.comment.text} 
+                {''}
+            </div>
         </div>
     )
 }
+
+Comment.propTypes = {
+    comment: PropTypes.shape ({
+        text: PropTypes.string,
+        username: PropTypes.string
+    })
+};
 
 export default Comment;
