@@ -3,7 +3,6 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import withAuthenticate from "./components/Authentication/withAuthenticate";
-import Login from './components/Login/Login';
 
 
 
@@ -17,6 +16,11 @@ class App extends React.Component {
           searchPosts= {this.searchPostsHandler}
           />
         <PostContainer 
+          posts= {
+            this.state.searchPosts.length > 0
+            ? this.state.searchPosts
+            : this.state.posts
+          }
           />
       </div>
     );
