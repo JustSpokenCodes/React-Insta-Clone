@@ -5,8 +5,11 @@ const PostTop = props => {
         <div className="user-top">
             <img className="profile-pic" 
                 src={props.thumbnailUrl} 
-                alt="user-profile" />
-            <p>{props.username}</p>
+                alt="user-profile" 
+            />
+            <div className="Username">
+            {props.username}
+            </div>
         </div>
     );
 };
