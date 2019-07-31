@@ -3,28 +3,27 @@ import './SearchBar.css';
 import { IoLogoInstagram, IoIosHeartEmpty } from "react-icons/io";
 import { FiCompass, FiUser } from "react-icons/fi";
 
- const SearchBar = (props) => {
+const SearchBar = (props) => {
     return (
         <header className="header">
-        <nav>
-        <div className="logo__container">
-                <div className="logo__icon">
-                <IoLogoInstagram />
+            <nav>
+                <div className="logo__container">
+                    <div className="logo__icon">
+                        <IoLogoInstagram />
+                    </div>
+                    <h3 className="logo__text">
+                        instagram
+                    </h3>
                 </div>
-                <h3 className="logo__text">
-                    instagram
-                </h3>
-            </div>
-            <input className="search" placeholder= "Search"/>
-            <div className="icon__container">
-            <div><FiCompass /></div>
-            <div><IoIosHeartEmpty /></div>
-            <div><FiUser /></div>
-            </div>
-        </nav>
-
-         </header>
+                <input className="search" placeholder= "Search"/>
+                <div className="icon__container">
+                    <div><FiCompass /></div>
+                    <div><IoIosHeartEmpty /></div>
+                    <div><FiUser /></div>
+                </div>
+            </nav>
+        </header>
     )
 }
 
- export default SearchBar;
+export default SearchBar;

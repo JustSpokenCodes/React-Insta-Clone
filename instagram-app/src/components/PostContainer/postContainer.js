@@ -1,33 +1,47 @@
-import React from 'react';
-import './PostContainer.css';
-import { IoIosHeartEmpty, IoIosCompass } from 'react-icons/io';
-import CommentSection from '../CommentSection/CommentSection';
+import React from "react";
+import PostTop from "./PostTop";
+import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from "prop-types";
 
- const PostContainer = (props) => {
-    return (
-        <div className="post-container">
-            <div className="user-info">
-                <img className="profile-pic" src={props.post.thumbnailUrl} alt="user-profile" />
-                <p>{props.post.username}</p>
-            </div>
-            <div className="user-post">
-                <img className="post-image" src={props.post.imageUrl} alt="user-post"/>
-            </div>
-            <div className="reaction">
-                <div className="post-icons">
-                    <IoIosHeartEmpty /> <IoIosCompass/>
+
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: props.post.likes
+        };
+    }
+    render(){
+        return(
+            <div className="PostContainer">
+                <div className="PostTopContainer">
+                    <PostTop 
+                        username={this.props.post.username}
+                        thumbnailUrl={this.props.post.thumbnailUrl}
+                    />
                 </div>
-                {props.post.likes} likes
+                <div className="ImgContainer">
+                    <img 
+                        alt="post thumbnail"
+                        className="post-image"
+                        src={this.props.post.imageUrl}
+                    />
+                </div>
+                <CommentSection 
+                    postId={this.props.post.imageUrl}
+                    comments={this.props.post.comments}
+                />
             </div>
-            {props.post.comments.map((comment, index) => {
-                console.log('==', comment);
-                return <CommentSection key={index} props= {comment} />
-            })}
-            <div className="timestamp">
-                {props.post.timestamp}
-            </div>
-        </div>
-    )
+        );
+    }
 }
 
- export default PostContainer;
+Post.propTypes = {
+    post: PropTypes.shape ({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string
+    })
+};
+
+export default Post;

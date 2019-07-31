@@ -1,19 +1,20 @@
-import React from 'react';
-import data from './dummy-data';
-import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import React, { Component } from 'react';
+import withAuthenticate from "./components/Authentication/withAuthenticate";
+import PostPage from "./components/PostContainer/PostPage";
 
-function App(){
-  const [post] = useState(data);
-  return (
-    <div className="App">
-      <SearchBar />
-      {post.map((userPost, index) =>{
-        return <PostContainer key={index} post={userPost}/>
-      })}
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state= {};
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <PostPage />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default withAuthenticate(App);
